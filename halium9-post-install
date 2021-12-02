@@ -4,7 +4,11 @@
 # Set chassis
 hostnamectl set-chassis handset
 
+# Update system users
 systemd-sysusers
+
+# Add /system symlink
+ln -s /android/system /system 
 
 # Add users
 [[ $(pacman -Q plasma-mobile-settings 2>/dev/null) ]] && USER='kde' || USER='manjaro'
