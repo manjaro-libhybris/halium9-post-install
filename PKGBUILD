@@ -23,4 +23,5 @@ package() {
     install -Dm644 "${srcdir}/halium9-post-install.service" -t "${pkgdir}/usr/lib/systemd/system/"
     install -Dm644 "${srcdir}/android.conf" -t "${pkgdir}/usr/lib/sysusers.d/"
     install -Dm644 "${srcdir}/lomiri-gtk.css" "${pkgdir}/opt/pinephone-post-install/lomiri/gtk.css"
+    touch "${pkgdir}/.writable_image"
 }
