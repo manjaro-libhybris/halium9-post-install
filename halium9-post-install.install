@@ -3,7 +3,7 @@ post_install() {
     sed -i s/"enable systemd-resolved.service"/"disable systemd-resolved.service"/g /usr/lib/systemd/system-preset/90-systemd.preset
   # Fix GTK in Lomiri
     if [ -e /usr/bin/unity8 ]; then
-        install -Dm644 "/opt/pinephone-post-install/lomiri/gtk.css" "/etc/skel/.config/gtk-3.0/gtk.css"
+        install -Dm644 "/opt/halium9-post-install/lomiri/gtk.css" "/etc/skel/.config/gtk-3.0/gtk.css"
     fi
 }
 
