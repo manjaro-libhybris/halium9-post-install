@@ -26,5 +26,4 @@ package() {
     install -Dm644 "${srcdir}/android.conf" -t "${pkgdir}/usr/lib/sysusers.d/"
     install -Dm644 "${srcdir}/lomiri-gtk.css" "${pkgdir}/opt/halium9-post-install/lomiri/gtk.css"
     install -Dm644 "${srcdir}/ril_subscription.conf" "${pkgdir}/etc/ofono/ril_subscription.conf"
-    touch "${pkgdir}/.writable_image"
 }

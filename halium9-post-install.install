@@ -5,6 +5,7 @@ post_install() {
     if [ -e /usr/bin/unity8 ]; then
         install -Dm644 "/opt/halium9-post-install/lomiri/gtk.css" "/etc/skel/.config/gtk-3.0/gtk.css"
     fi
+    touch /.writable_image
 }
 
 post_upgrade() {
