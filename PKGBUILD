@@ -7,14 +7,14 @@ pkgdesc="Manjaro ARM's Halium 9 post install script"
 arch=('any')
 url="https://www.manjaro.org"
 license=('GPL')
-depends=('gzip' 'glibc-locales')
+depends=('gzip' 'glibc-locales' 'wget' 'systemd')
 source=("halium9-post-install"
         "halium9-post-install.service"
         "android.conf"
         "lomiri-gtk.css"
         "ril_subscription.conf")
 install=$pkgname.install
-md5sums=('269b102d6f844bec50abcc8be32628c0'
+md5sums=('6d4f36fc915ea8cb3acd9179e4bca14c'
          '61fd3d0e518f087210f56e2b0acf923b'
          'a3447f23611d71f9d68515b09527c721'
          '697420d8cfb1acb3a6b55a364a267f24'
