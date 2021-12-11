@@ -2,7 +2,7 @@
 
 pkgname=halium9-post-install
 pkgver=20$(date +%y%m%d)
-pkgrel=2
+pkgrel=4
 pkgdesc="Manjaro ARM's Halium 9 post install script"
 arch=('any')
 url="https://www.manjaro.org"
@@ -28,5 +28,5 @@ package() {
     install -Dm644 "${srcdir}/android.conf" -t "${pkgdir}/usr/lib/sysusers.d/"
     install -Dm644 "${srcdir}/lomiri-gtk.css" "${pkgdir}/opt/halium9-post-install/lomiri/gtk.css"
     install -Dm644 "${srcdir}/ril_subscription.conf" "${pkgdir}/etc/ofono/ril_subscription.conf"
-    install -Dm644 "${srcdir}/90_manjaro.gschema.override" -t "${pkgdir}/usr/share/glib-2.0/schemas"
+    install -Dm644 "${srcdir}/90_manjaro.gschema.override" -t "${pkgdir}/usr/share/glib-2.0/schemas/"
 }
