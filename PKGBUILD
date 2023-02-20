@@ -1,8 +1,8 @@
 # Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 
 pkgname=halium9-post-install
-pkgver=20$(date +%y%m%d)
-pkgrel=4
+pkgver=21$(date +%y%m%d)
+pkgrel=2
 pkgdesc="Manjaro libhybris Halium 9 post install script"
 arch=('any')
 url="https://github.com/manjaro-libhybris/halium9-post-install"
