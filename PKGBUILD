@@ -1,32 +1,29 @@
-# Maintainer: Erik Inkinen <erik.inkinen@gmail.com>
+# Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 
 pkgname=halium9-post-install
 pkgver=20$(date +%y%m%d)
 pkgrel=4
-pkgdesc="Manjaro ARM's Halium 9 post install script"
+pkgdesc="Manjaro libhybris Halium 9 post install script"
 arch=('any')
-url="https://www.manjaro.org"
+url="https://github.com/manjaro-libhybris/halium9-post-install"
 license=('GPL')
 depends=('gzip' 'glibc-locales' 'wget' 'systemd')
 source=("halium9-post-install"
         "halium9-post-install.service"
         "android.conf"
-        "lomiri-gtk.css"
         "ril_subscription.conf"
         "90_manjaro.gschema.override")
 install=$pkgname.install
-md5sums=('6d4f36fc915ea8cb3acd9179e4bca14c'
-         '61fd3d0e518f087210f56e2b0acf923b'
-         'a3447f23611d71f9d68515b09527c721'
-         '697420d8cfb1acb3a6b55a364a267f24'
-         '23c0519d2ee8531009611d9f7bd47353'
-         'bd274d0019ac5b378aec92ecd823d75a')
+sha256sums=('00c0d3e0692dda3b7a26618613a3d6b4d04ee31b4bfd848d2686ff51d03d74d9'
+            'd1cfdc5b3c7407d754c74997e46ba2b57e2c69ef1ae26b62eac6abfebc756889'
+            '5571610e4cee293e8776b33ec225ca24af05197cfd7c3ebd3c2e8d830efd55b0'
+            'f032810ea128d4cf9377d144cded32cbf1a2ed18087403fe706a1f9707fd0d7f'
+            '18d06f03830a8afa75a774d61c4b9ec4fca9b8d3594bb3e19e6d38f3a652fbdb')
 
 package() {
     install -Dm755 "${srcdir}/halium9-post-install" -t "${pkgdir}/usr/bin/"
     install -Dm644 "${srcdir}/halium9-post-install.service" -t "${pkgdir}/usr/lib/systemd/system/"
     install -Dm644 "${srcdir}/android.conf" -t "${pkgdir}/usr/lib/sysusers.d/"
-    install -Dm644 "${srcdir}/lomiri-gtk.css" "${pkgdir}/opt/halium9-post-install/lomiri/gtk.css"
     install -Dm644 "${srcdir}/ril_subscription.conf" "${pkgdir}/etc/ofono/ril_subscription.conf"
     install -Dm644 "${srcdir}/90_manjaro.gschema.override" -t "${pkgdir}/usr/share/glib-2.0/schemas/"
 }
