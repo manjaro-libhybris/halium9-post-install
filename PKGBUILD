@@ -14,11 +14,11 @@ source=("halium9-post-install"
         "ril_subscription.conf"
         "90_manjaro.gschema.override")
 install=$pkgname.install
-sha256sums=('00c0d3e0692dda3b7a26618613a3d6b4d04ee31b4bfd848d2686ff51d03d74d9'
+sha256sums=('f357b90df3ae070ca9dd4dc90e032617b37299485a07b33d8fe6435af1e76815'
             'd1cfdc5b3c7407d754c74997e46ba2b57e2c69ef1ae26b62eac6abfebc756889'
             '5571610e4cee293e8776b33ec225ca24af05197cfd7c3ebd3c2e8d830efd55b0'
             'f032810ea128d4cf9377d144cded32cbf1a2ed18087403fe706a1f9707fd0d7f'
-            '18d06f03830a8afa75a774d61c4b9ec4fca9b8d3594bb3e19e6d38f3a652fbdb')
+            '6f4e716d6e3585cb60b21c64ea75eebdc537238e5a5a065c21ae4ac05e7c3a53')
 
 package() {
     install -Dm755 "${srcdir}/halium9-post-install" -t "${pkgdir}/usr/bin/"
