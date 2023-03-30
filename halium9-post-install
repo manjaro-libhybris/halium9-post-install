@@ -31,6 +31,9 @@ localectl set-locale "en_US.UTF-8"
 # Set the manjaro theme for plymouth
 plymouth-set-default-theme manjaro
 
+# Gloabally enable audiosystem-passthrough on first boot
+systemctl --global enable audiosystem-passthrough
+
 # Disable this service, so it only gets run on first boot
 systemctl disable halium9-post-install.service
 
