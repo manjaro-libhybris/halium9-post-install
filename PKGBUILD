@@ -2,7 +2,7 @@
 
 pkgname=halium9-post-install
 pkgver=21$(date +%y%m%d)
-pkgrel=2
+pkgrel=3
 pkgdesc="Manjaro libhybris Halium 9 post install script"
 arch=('any')
 url="https://github.com/manjaro-libhybris/halium9-post-install"
@@ -14,7 +14,7 @@ source=("halium9-post-install"
         "ril_subscription.conf"
         "90_manjaro.gschema.override")
 install=$pkgname.install
-sha256sums=('f357b90df3ae070ca9dd4dc90e032617b37299485a07b33d8fe6435af1e76815'
+sha256sums=('aef0bf12e7a9c60cd1f77b849cdf4dd200b69aa898b098cd39a64e10cfd7f66a'
             'd1cfdc5b3c7407d754c74997e46ba2b57e2c69ef1ae26b62eac6abfebc756889'
             '5571610e4cee293e8776b33ec225ca24af05197cfd7c3ebd3c2e8d830efd55b0'
             'f032810ea128d4cf9377d144cded32cbf1a2ed18087403fe706a1f9707fd0d7f'
